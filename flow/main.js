@@ -46,7 +46,8 @@ if (!room) {
 ****************************************************************************/
 
 // Connect to the signaling server
-var socket = io.connect('ws://localhost:8085');
+var socket = io.connect('ws://ec2-3-125-38-186.eu-central-1.compute.amazonaws.com:8085');
+// var socket = io.connect('ws://localhost:8085');
 
 socket.on('ipaddr', function (ipaddr) {
 	console.log('Server IP address is: ' + ipaddr);
