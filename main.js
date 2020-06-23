@@ -2,7 +2,8 @@
 var peerConn;
 var dataChannel;
 
-var socket = io.connect('https://ec2-3-125-38-186.eu-central-1.compute.amazonaws.com:8085');
+// var socket = io.connect('https://ec2-3-125-38-186.eu-central-1.compute.amazonaws.com:8085');
+var socket = io.connect('ws://localhost:8085');
 
 socket.on('peers', function(peers) {
 	console.log('got peers from signaling server', peers);
